@@ -31,10 +31,16 @@ public class Programa {
 			System.out.println(obj);
 		}
 		
-		System.out.println("\n-----------Teste 3 sellerInsert -------------");
+		System.out.println("\n-----------Teste 4 sellerInsert -------------");
 		Seller seller3 = new Seller(null,"Greg","greg@gmail.com",new Date(),4000.0, depart);
 		sellerDao.insert(seller3);
 		System.out.println("Inserido, novo ID="+seller3.getId());
+		
+		System.out.println("\n-----------Teste 5 sellerUpdate -------------");
+		seller3 = sellerDao.findById(1);
+		seller3.setNome("Martha Waine");
+		sellerDao.update(seller3);
+		System.out.println("Atualização complera!\n");
 	}
 
 }
